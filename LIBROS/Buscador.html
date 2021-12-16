@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <!-- META viewport: para adaptivilidad-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biclioteca</title>
+  <style>
+    .gris-claro {
+      background-color: lightgrey;
+      font-weight: bold;
+    }
+
+    .gris-titulo {
+      background-color: grey;
+      text-align: center;
+      color: white;
+    }
+
+    .azul-cielo {
+      background-color: lightskyblue;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: 4rem;
+      font-weight: 800;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      padding: 10px;
+    }
+
+    .enlinea {
+      display: inline;
+      padding: 0px 20px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 10px;
+      font-size: 1rem;
+      text-align: center;
+      margin: 0;
+    }
+
+    .separacion {
+      padding: 5px 0px;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container gris-claro">
+    <header class="row">
+      <section class="col">
+        <section class="row gris-titulo">
+          <h1 class="col">Biblioteca</h1>
+        </section>
+        <section class="row">
+          <nav class="col">
+            <ul class="nav nav-pills">
+              <li class="nav-item">
+                <a class="nav-link active" href="Buscador.html">Home</a>
+              </li>
+              <li class="enlinea nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                  aria-expanded="false">Libros</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Busqueda</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="Alta.html">Alta</a>
+                  <a class="dropdown-item" href="#">Modificacion</a>
+                  <a class="dropdown-item" href="#">Baja</a>
+                </div>
+              </li>
+            </ul>
+            
+            </nav>
+            <a class=" btn btn-primary btn-sm" href="../index_log.html" role="button">Perfil</a>
+        </section>
+      </section>
+    </header>
+    <main class="row">
+      <section class="col">
+        <article class="row">
+          <nav class="col navbar navbar-dark bg-dark">
+            <div class="btn-group">
+              <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+                Genero
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">sfdg</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+
+              <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+                Autor
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+
+              <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+                estilo
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div>
+            <div class="btn-group">
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2 form-control-sm" type="search" placeholder="Search"
+                  aria-label="Search">
+                <button class="btn btn-outline-success btn-sm" type="submit">Search</button>
+              </form>
+            </div>
+          </nav>
+        </article>
+        <section class="row  separacion">
+          <article class="col gris-claro">
+            <div class="card">
+              <img src="IMG/ejemplo.jpg" alt="Libro" class="card-img-top rounded">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </article>
+          <article class="col gris-claro">
+            <div class="card">
+              <img src="IMG/ejemplo.jpg" alt="Libro" class="card-img-top rounded">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </article>
+          <article class="col gris-claro">
+            <div class="card">
+              <img src="IMG/ejemplo.jpg" alt="Libro" class="card-img-top rounded">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </article>
+          <article class="col gris-claro">
+            <div class="card">
+              <img src="IMG/ejemplo.jpg" alt="Libro" class="card-img-top rounded">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </article>
+        </section>
+        <section class="row  separacion">
+          <article class="col gris-claro">
+            <div class="card">
+              <img src="IMG/ejemplo.jpg" alt="Libro" class="card-img-top rounded">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </article>
+          <article class="col gris-claro">
+            <div class="card">
+              <img src="IMG/ejemplo.jpg" alt="Libro" class="card-img-top rounded">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </article>
+          <article class="col gris-claro">
+            <div class="card">
+              <img src="IMG/ejemplo.jpg" alt="Libro" class="card-img-top rounded">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </article>
+          <article class="col gris-claro">
+            <div class="card">
+              <img src="IMG/ejemplo.jpg" alt="Libro" class="card-img-top rounded">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <nav aria-label="Page navigation example">
+          <ul class="pagination">
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+    </main>
+    <footer class="row">
+      <section class="col azul-cielo border-top border-dark">
+        <p>dereitos de autor</p>
+      </section>
+    </footer>
+  </main>
+  <script src="../node_modules/jquery/dist/jquery.slim.min.js"></script>
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

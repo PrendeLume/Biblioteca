@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <!-- META viewport: para adaptivilidad-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biclioteca</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .gris-claro {
+            background-color: lightgrey;
+            font-weight: bold;
+        }
+
+        .gris-titulo {
+            background-color: grey;
+            text-align: center;
+            color: white;
+        }
+
+        .azul-cielo {
+            background-color: lightskyblue;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding: 10px;
+        }
+
+        .enlinea {
+            display: inline;
+            padding: 0px 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            font-size: 1rem;
+            text-align: center;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container gris-claro">
+        <header class="row">
+            <section class="col">
+                <section class="row gris-titulo">
+                    <h1 class="col">Biblioteca</h1>
+                </section>
+                <article class="row">
+                    <nav class="col navbar navbar-dark bg-dark justify-content-start">
+                        <ul>
+                            <li class="enlinea"><a href="index.html">Home</a></li>
+                            <li class="enlinea"><a href="LIBROS/Buscador.html">Libros</a></li>
+                        </ul>
+                    </nav>
+                </article>
+            </section>
+        </header>
+        <main class="row justify-content-center" style="min-height: 80vh;">
+            <dix class="col-4">
+                <form class="mt-4">
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">User</label>
+                        <input type="text" class="form-control" id="text" aria-describedby="emailHelp">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Recordar</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary"><a href="LIBROS/Buscador.html" style="text-decoration: none; color: white;">Login</a></button>
+
+                </form>
+            </dix>
+        </main>
+        <footer class="row">
+            <section class="col azul-cielo border-top border-dark">
+                <p>dereitos de autor</p>
+            </section>
+        </footer>
+    </main>
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

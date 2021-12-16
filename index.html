@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <!-- META viewport: para adaptivilidad-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biclioteca</title>
+    <style>
+        * {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 1rem;
+        }
+
+        .gris-claro {
+            background-color: lightgrey;
+            font-weight: bold;
+        }
+
+        .gris-titulo {
+            background-color: grey;
+            text-align: center;
+            color: white;
+        }
+
+        .azul-cielo {
+            background-color: lightskyblue;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            
+            padding: 10px;
+        }
+
+        .enlinea {
+            display: inline;
+            padding: 0px 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            font-size: 1rem;
+            text-align: center;
+            margin: 0;
+        }
+        .separacion{
+            margin-top:  5px;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container gris-claro">
+        <header class="row">
+            <section class="col">
+                <section class="row gris-titulo">
+                    <h1 class="col">Biblioteca</h1>
+                </section>
+            </section>
+        </header>
+        <main class="row" style="min-height: 1000px;">
+            <section class="col">
+                <article class="row">
+                    <nav class="col navbar navbar-dark bg-dark">
+                        <ul>
+                            <li class="enlinea"><a href="index.html">Home</a></li>
+                            <li class="enlinea"><a href="LIBROS/Buscador.html">Libros</a></li>
+                        </ul>
+                        <a class="btn btn-primary btn-sm" href="index_log.html" role="button">Iniciar Sesion</a>
+                    </nav>
+                </article>
+        </main>
+        <footer class="row">
+            <section class="col azul-cielo border-top border-dark">
+                <p>dereitos de autor</p>
+            </section>
+        </footer>
+    </main>
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
