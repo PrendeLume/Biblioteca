@@ -12,21 +12,33 @@
        
     </head>
     <body>
-        <main class="container-fluid gris-claro">
+        <main class="container gris-claro">
             <header class="row">
                 <section class="col">
-                    <section class="row gris-titulo">
-                        <h1 class="col">Biblioteca</h1>
-                    </section>
-                    <section class="row">
-                        <nav class="col">
-                            <ul >
-                                <li class="enlinea"><a href="../index.html">Home</a></li>
-                                <li class="enlinea"><a href="Libros/Buscador.html">Libros</a></li>
-                            </ul>
-                    </section>
+                  <section class="row gris-titulo">
+                    <h1 class="col">Biblioteca</h1>
+                  </section>
+                  <section class="row">
+                    <nav class="col">
+                      <ul class="nav nav-pills">
+                        <li class="enlinea"><a href="../index.html">Home</a></li>
+                        <li class="enlinea nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                            aria-expanded="false">Libros</a>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="Buscador.html">Busqueda</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="Alta.html">Alta</a>
+                            <a class="dropdown-item" href="#">Modificacion</a>
+                            <a class="dropdown-item" href="#">Baja</a>
+                          </div>
+                        </li>
+                      </ul>
+                      
+                    </nav>
+                  </section>
                 </section>
-            </header>
+              </header>
             <main class="row">
                 <section class="col">
                     <article class="row">
