@@ -2,7 +2,9 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1rem;
 }
-
+.blanco {
+    color: white;
+}
 .gris-claro {
     background-color: lightgrey;
     font-weight: bold;

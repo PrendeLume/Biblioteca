@@ -25,7 +25,7 @@
                             <li class="enlinea"><a href="index.html">Home</a></li>
                             <li class="enlinea"><a href="LIBROS/Buscador.html">Buscador</a></li>
                         </div>
-                        <a class="btn btn-primary btn-sm" href="login.html" role="button">Iniciar Sesion</a>
+                        <a class="btn btn-primary btn-sm" href="login.html" role="button" onload="comprobarSesion();" id="sesion">Iniciar Sesion</a>
                     </nav>
                 </section>
             </section>
@@ -87,7 +87,14 @@
     </main>
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-
+    <script>
+        //alert(sessionStorage.length);
+        window.onload = function() {
+            if(sessionStorage.length != 0){
+                document.getElementById("sesion").innerHTML = sessionStorage.getItem("nombre_usuario");
+            }
+        }()
+    </script>
 </body>
 
 </html>

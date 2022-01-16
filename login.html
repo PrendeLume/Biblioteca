@@ -42,10 +42,10 @@
                         <input type="password" class="form-control" id="contraseña">
                     </div>
                     <div class="form-group form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <input type="checkbox" class="form-check-input" id="recordar">
                         <label class="form-check-label" for="exampleCheck1">Recordar</label>
                     </div>
-                    <button type="submit" class="btn btn-primary">Login</button>
+                    <button type="submit" class="btn btn-primary" ><a href="index.html" class="blanco">Login</a></button>
                 </form>
             </dix>
         </main>
@@ -71,20 +71,21 @@
             //Comprobamos si el usuario existe
             var usuarioCorrecto = datos.usuarios.find(
                 function(x){
-                   return x.usuario === usuario;
+                   return x.nombre === usuario;
                 }
             )
             
-            alert("credenciales correctos");
-            console.info(usuarioCorrecto);
-
+            var contraseñaCorrecto = datos.usuarios.find(
+                function(x){
+                   return x.contraseña === contraseña;
+                }
+            )
             //Comprobamos si la contraseña es correcta y la guardamos en el sesionStorage
             
             if(usuarioCorrecto && contraseñaCorrecto){
-                sessionStorage.setItem("nombre_usuario", usuarioCorrecto.usuario);
+                sessionStorage.setItem("nombre_usuario", usuarioCorrecto.nombre);
                 sessionStorage.setItem("contraseña_usuario", usuarioCorrecto.contraseña);
             }
-            
         }
     </script>
 </body>
