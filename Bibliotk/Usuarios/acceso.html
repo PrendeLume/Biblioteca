@@ -100,7 +100,7 @@
 
 					var actual = new Date();
 					sessionStorage.setItem("conexion", actual.getTime());
-					sessionStorage.setItem("expira", actual.setMinutes(5));
+					sessionStorage.setItem("expira", actual.getTime + actual.setMinutes(5));
 
 					return true;
 

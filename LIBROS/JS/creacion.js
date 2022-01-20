@@ -1,3 +1,4 @@
+
 for (let i = 0; i < datos.libros.length; i++) {
     //creacion del articulo
     var articulo = document.createElement("article");
@@ -41,5 +42,6 @@ for (let i = 0; i < datos.libros.length; i++) {
 
     document.getElementById("1").appendChild(articulo);
 }
+
 
 
