@@ -22,8 +22,7 @@
                 <section class="row">
                     <nav class="col navbar navbar-dark bg-dark">
                         <div>
-                            <li class="enlinea"><a href="index.html">Home</a></li>
-                            <li class="enlinea"><a href="LIBROS/Buscador.html">Buscador</a></li>
+                            <li class="enlinea"><a href="index.html">Inicio</a></li>
                         </div>
                     </nav>
                 </section>
@@ -58,36 +57,7 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="JS/datos.js"></script>
-    <script>
-        window.onload = (function(){
-            
-        });
-
-        function comprobarCredenciales(){
-            //Obtenemos los datos del usuarios
-            var usuario = document.forms["form"]["usuario"].value;
-            var contraseña = document.forms["form"]["contraseña"].value
-
-            //Comprobamos si el usuario existe
-            var usuarioCorrecto = datos.usuarios.find(
-                function(x){
-                   return x.nombre === usuario;
-                }
-            )
-            
-            var contraseñaCorrecto = datos.usuarios.find(
-                function(x){
-                   return x.contraseña === contraseña;
-                }
-            )
-            //Comprobamos si la contraseña es correcta y la guardamos en el sesionStorage
-            
-            if(usuarioCorrecto && contraseñaCorrecto){
-                sessionStorage.setItem("nombre_usuario", usuarioCorrecto.nombre);
-                sessionStorage.setItem("contraseña_usuario", usuarioCorrecto.contraseña);
-            }
-        }
-    </script>
+    <script src="JS/sessionStorage.js"></script>
 </body>
 
 </html>
