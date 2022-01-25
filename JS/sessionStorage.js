@@ -27,4 +27,8 @@ function comprobarCredenciales() {
     }else{
         return false;
     }
+    document.getElementById("cerrarSesion").addEventListener("click", function(){
+        alert("hola");
+        sessionStorage.clear();
+    });
 }

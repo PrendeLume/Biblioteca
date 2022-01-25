@@ -47,3 +47,10 @@ ul {
     margin-top:  5px;
     margin-bottom: 10px;
 }
+.navbar-dark .navbar-brand{
+    color: #007bff;
+}
+#botonSesion{
+    background-color: unset;
+    color: #007bff;
+}

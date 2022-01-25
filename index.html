@@ -20,30 +20,35 @@
                     <h1 class="col">Biblioteca</h1>
                 </section>
                 <section class="row">
-                    <nav class="navbar navbar-expand-md navbar-dark bg-dark col-12">
-                        <a class="navbar-brand" href="../index.html">Inicio</a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault">
-                          <span class="navbar-toggler-icon"></span>
+                    <nav class="navbar navbar-expand-md navbar-dark bg-dark col">
+
+                        <a class="navbar-brand" href="index.html">Inicio</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarCollapse">
+                            <span class="navbar-toggler-icon"></span>
                         </button>
-                
+
                         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-                          <ul class="navbar-nav mr-auto">
-                            
-                            <li id="menuInicio" class="nav-item dropdown">
-                                <!--Seguridad-->
-                            <script src="JS/sessionStorage.js"></script>
-                            <!--Seguridad-->
-                              <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown">Buscador</a>
-                              <div  class="dropdown-menu">
-                                <a class="dropdown-item" href="login.html" id="sesion">Iniciar Sesion</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" disable>Cerrar Sesion</a>
-                              </div>
-                            </li>
-                          </ul>
+                            <ul class="navbar-nav mr-auto" id="menuInicio">
+
+
+                            </ul>
+                            <div class="dropdown">
+                                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="botonSesion"
+                                    data-toggle="dropdown">
+                                    Sesion
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a class="dropdown-item" href="login.html" id="sesion">Iniciar Sesion</a>
+                                    <div class="dropdown-divider" id="Separador"></div>
+                                    <a class="dropdown-item" href="#" id="cerrarSesion">Cerrar Sesion</a>
+                                </div>
+                            </div>
+
                         </div>
-                      </nav>
-                    
+                    </nav>
+
                 </section>
             </section>
 
@@ -104,10 +109,16 @@
     </main>
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!--Seguridad-->
+    <script src="JS/sessionStorage.js"></script>
+    <!--Seguridad-->
     <script>
+
         window.onload = function () {
             if (sessionStorage.length != 0) {
-                document.getElementById("sesion").innerHTML = sessionStorage.getItem("nombre_usuario");
+                document.getElementById("sesion").remove();
+                document.getElementById("Separador").remove();
+                document.getElementById("botonSesion").innerHTML = sessionStorage.getItem("nombre_usuario");
 
                 /* creacion del boton busqueda */
                 var li = document.createElement("li");
@@ -119,8 +130,12 @@
 
                 document.getElementById("menuInicio").appendChild(li);
             }
+            document.getElementById("cerrarSesion").addEventListener("click", function () {
+                window.reload;
+                sessionStorage.clear();
+            })
+        }();
 
-        }()
     </script>
 </body>
 
