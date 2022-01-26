@@ -41,8 +41,8 @@
 
                                 <div class="dropdown-menu dropdown-menu-right">
                                     <a class="dropdown-item" href="login.html" id="sesion">Iniciar Sesion</a>
-                                    <div class="dropdown-divider" id="Separador"></div>
-                                    <a class="dropdown-item" href="#" id="cerrarSesion">Cerrar Sesion</a>
+                                    
+                                    <a class="dropdown-item" href="index.html" id="cerrarSesion">Cerrar Sesion</a>
                                 </div>
                             </div>
 
@@ -117,7 +117,6 @@
         window.onload = function () {
             if (sessionStorage.length != 0) {
                 document.getElementById("sesion").remove();
-                document.getElementById("Separador").remove();
                 document.getElementById("botonSesion").innerHTML = sessionStorage.getItem("nombre_usuario");
 
                 /* creacion del boton busqueda */
@@ -129,9 +128,10 @@
                 li.appendChild(a);
 
                 document.getElementById("menuInicio").appendChild(li);
+            }else{
+                document.getElementById("cerrarSesion").remove();
             }
             document.getElementById("cerrarSesion").addEventListener("click", function () {
-                window.reload;
                 sessionStorage.clear();
             })
         }();

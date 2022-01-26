@@ -1,6 +1,12 @@
 window.onload = function () {
 
     for (let i = 0; i < datos.libros.length; i++) {
+        //Creacion filas
+        if (i % 4 == 0) {
+            var row = document.createElement("section");
+            row.setAttribute("class", "row");
+        }
+        
         //creacion del articulo
         var articulo = document.createElement("article");
         articulo.setAttribute("class", "col-3");
@@ -40,7 +46,8 @@ window.onload = function () {
         div.appendChild(divBody);
         articulo.appendChild(div);
         //console.log(articulo);
-
-        document.getElementById("1").appendChild(articulo);
+        row.appendChild(articulo);
+        
+        document.getElementById("1").appendChild(row);
     }
 }
