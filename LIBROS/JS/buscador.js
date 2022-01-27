@@ -1,13 +1,32 @@
 window.onload = function () {
+    document.forms['busqueda']['busquedaTitulo'].addEventListener('keyup', busquedaLibros);
+    distribuirLibros(datos.libros);
+}
 
-    for (let i = 0; i < datos.libros.length; i++) {
+function busquedaLibros() {
+    var libros = datos.libros;
+    var abuscar = document.forms['busqueda']['busquedaTitulo'].value;
+    var aux = [];
+
+    for (var i=0; i< libros.length; i++) {
+        if (libros[i].titulo.includes(abuscar))
+            aux.push(libros[i]);
+    }
+
+    distribuirLibros(aux);       
+}
+
+function distribuirLibros(libros) {
+    document.getElementById("libros").innerHTML = "";
+
+    for (let i = 0; i < libros.length; i++) {
         //Creacion filas
         if (i % 4 == 0) {
             var row = document.createElement("section");
             row.setAttribute("class", "row");
             row.className+= " separacionTop";
         }
-        
+        1
         //creacion del articulo
         var articulo = document.createElement("article");
         articulo.setAttribute("class", "col-3");
@@ -18,7 +37,7 @@ window.onload = function () {
         div.setAttribute("class", "card");
         //creacion de la imagen
         var imagen = document.createElement("img");
-        imagen.setAttribute("src", datos.libros[i].url);
+        imagen.setAttribute("src", libros[i].url);
         imagen.setAttribute("class", "card-img-top");
         imagen.className += " rounded";
         //creacion del card-body
@@ -27,11 +46,11 @@ window.onload = function () {
         //creacion del titulo
         var titulo = document.createElement("h5");
         titulo.setAttribute("class", "card-title");
-        titulo.innerHTML = datos.libros[i].titulo;
+        titulo.innerHTML = libros[i].titulo;
         // creacion descripcion
         var descripcion = document.createElement("p");
         descripcion.setAttribute("class", "card-text");
-        descripcion.innerHTML = datos.libros[i].descripcion;
+        descripcion.innerHTML = libros[i].descripcion;
         // creacion del boton 'verMas'
         var boton = document.createElement("a");
         boton.setAttribute("class", "btn");
@@ -49,6 +68,6 @@ window.onload = function () {
         //console.log(articulo);
         row.appendChild(articulo);
         
-        document.getElementById("1").appendChild(row);
+        document.getElementById("libros").appendChild(row);
     }
-}
+};
