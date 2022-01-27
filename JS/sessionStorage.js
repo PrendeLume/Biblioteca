@@ -1,3 +1,32 @@
+
+window.onload = function () {
+    if (sessionStorage.length != 0) {
+        document.getElementById("sesion").remove();
+        document.getElementById("botonSesion").innerHTML = sessionStorage.getItem("nombre_usuario");
+
+        /* creacion del boton busqueda */
+        var li = document.createElement("li");
+        li.setAttribute("class", "enlinea");
+        var a = document.createElement("a");
+        a.setAttribute("href", "LIBROS/Buscador.html");
+        a.innerHTML = "Buscador";
+        li.appendChild(a);
+
+        document.getElementById("menuInicio").appendChild(li);
+    } else {
+        document.getElementById("cerrarSesion").remove();
+    }
+    console.log((new Date().getTime()));
+    if (sessionStorage.getItem('Expiracion') == (new Date().getTime())) {
+        sessionStorage.clear();
+    }
+
+    document.getElementById("cerrarSesion").addEventListener("click", function () {
+        sessionStorage.clear();
+    })
+}();
+
+
 function comprobarCredenciales() {
     //Obtenemos los datos del usuarios
     var usuario = document.forms["form"]["usuario"].value;
@@ -24,8 +53,8 @@ function comprobarCredenciales() {
         sessionStorage.setItem("Conexion", date.getTime());
         sessionStorage.setItem("Expiracion", date.getTime() + 300000);
 
-    }else{
+    } else {
         return false;
     }
-    
+
 }
