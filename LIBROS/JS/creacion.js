@@ -5,6 +5,7 @@ window.onload = function () {
         if (i % 4 == 0) {
             var row = document.createElement("section");
             row.setAttribute("class", "row");
+            row.className+= " separacionTop";
         }
         
         //creacion del articulo
