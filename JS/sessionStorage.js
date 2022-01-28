@@ -20,9 +20,10 @@ window.onload = function () {
     if (sessionStorage.getItem('Expiracion') == (new Date().getTime())) {
         sessionStorage.clear();
     }
-
+    
     document.getElementById("cerrarSesion").addEventListener("click", function () {
         sessionStorage.clear();
+        localStorage.clear();
     })
 }();
 
@@ -52,6 +53,8 @@ function comprobarCredenciales() {
         sessionStorage.setItem("contraseña_usuario", usuarioCorrecto.contraseña);
         sessionStorage.setItem("Conexion", date.getTime());
         sessionStorage.setItem("Expiracion", date.getTime() + 300000);
+
+        localStorage.setItem("libros", JSON.stringify(datos.libros));
 
     } else {
         return false;

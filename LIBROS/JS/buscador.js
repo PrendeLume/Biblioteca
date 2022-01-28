@@ -1,10 +1,11 @@
 window.onload = function () {
     document.forms['busqueda']['busquedaTitulo'].addEventListener('keyup', busquedaLibros);
     distribuirLibros(datos.libros);
-}
+};
 
 function busquedaLibros() {
-    var libros = datos.libros;
+    //var libros = datos.libros;
+    var libros = JSON.parse(localStorage.getItem(libros));
     var abuscar = document.forms['busqueda']['busquedaTitulo'].value;
     var aux = [];
 
@@ -14,7 +15,7 @@ function busquedaLibros() {
     }
 
     distribuirLibros(aux);       
-}
+};
 
 function distribuirLibros(libros) {
     document.getElementById("libros").innerHTML = "";
