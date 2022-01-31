@@ -22,7 +22,7 @@ function distribuirLibros(libros) {
 
     for (let i = 0; i < libros.length; i++) {
         //Creacion filas
-        if (i % 4 == 0) {
+        if (i % 6 == 0) {
             var row = document.createElement("section");
             row.setAttribute("class", "row");
             row.className+= " separacionTop";
@@ -30,7 +30,7 @@ function distribuirLibros(libros) {
         1
         //creacion del articulo
         var articulo = document.createElement("article");
-        articulo.setAttribute("class", "col-3");
+        articulo.setAttribute("class", "col-2");
         articulo.className += " gris-claro";
         //creacion del div(card)
         var div = document.createElement("div")
@@ -52,17 +52,25 @@ function distribuirLibros(libros) {
         var descripcion = document.createElement("p");
         descripcion.setAttribute("class", "card-text");
         descripcion.innerHTML = libros[i].descripcion;
-        // creacion del boton 'verMas'
-        var boton = document.createElement("a");
-        boton.setAttribute("class", "btn");
-        boton.className += " btn-primary";
-        boton.setAttribute("href", "#");
-        boton.innerHTML = "Ver Mas";
+        // creacion del boton 'Modificar'
+        var botonModificar = document.createElement("a");
+        botonModificar.setAttribute("class", "btn d-flex justify-content-around");
+        botonModificar.className += " btn-warning";
+        botonModificar.setAttribute("href", "#");
+        botonModificar.innerHTML = "Modificar";
+
+        // creacion del boton 'eliminar'
+        var botonEliminar = document.createElement("a");
+        botonEliminar.setAttribute("class", "btn d-flex justify-content-around");
+        botonEliminar.className += " btn-danger mt-2";
+        botonEliminar.setAttribute("href", "#");
+        botonEliminar.innerHTML = "Eliminar";
 
         //añadir todo
         divBody.appendChild(titulo);
         divBody.appendChild(descripcion);
-        divBody.appendChild(boton);
+        divBody.appendChild(botonModificar);
+        divBody.appendChild(botonEliminar);
         div.appendChild(imagen);
         div.appendChild(divBody);
         articulo.appendChild(div);
