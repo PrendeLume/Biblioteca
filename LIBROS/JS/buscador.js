@@ -24,14 +24,12 @@ function distribuirLibros(libros) {
         //Creacion filas
         if (i % 6 == 0) {
             var row = document.createElement("section");
-            row.setAttribute("class", "row");
-            row.className+= " separacionTop";
+            row.setAttribute("class", "row separacionTop");
         }
         1
         //creacion del articulo
         var articulo = document.createElement("article");
-        articulo.setAttribute("class", "col-2");
-        articulo.className += " gris-claro";
+        articulo.setAttribute("class", "col-2 gris-claro");
         //creacion del div(card)
         var div = document.createElement("div")
 
@@ -39,8 +37,7 @@ function distribuirLibros(libros) {
         //creacion de la imagen
         var imagen = document.createElement("img");
         imagen.setAttribute("src", libros[i].url);
-        imagen.setAttribute("class", "card-img-top");
-        imagen.className += " rounded";
+        imagen.setAttribute("class", "card-img-top rounded");
         //creacion del card-body
         var divBody = document.createElement("div");
         divBody.setAttribute("class", "card-body");
@@ -54,15 +51,13 @@ function distribuirLibros(libros) {
         descripcion.innerHTML = libros[i].descripcion;
         // creacion del boton 'Modificar'
         var botonModificar = document.createElement("a");
-        botonModificar.setAttribute("class", "btn d-flex justify-content-around");
-        botonModificar.className += " btn-warning";
+        botonModificar.setAttribute("class", "btn d-flex justify-content-around btn-warning");
         botonModificar.setAttribute("href", "#");
         botonModificar.innerHTML = "Modificar";
 
         // creacion del boton 'eliminar'
         var botonEliminar = document.createElement("a");
-        botonEliminar.setAttribute("class", "btn d-flex justify-content-around");
-        botonEliminar.className += " btn-danger mt-2";
+        botonEliminar.setAttribute("class", "btn d-flex justify-content-around btn-danger mt-2");
         botonEliminar.setAttribute("href", "#");
         botonEliminar.innerHTML = "Eliminar";
 
