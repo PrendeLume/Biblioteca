@@ -55,6 +55,7 @@ function comprobarCredenciales() {
         sessionStorage.setItem("Expiracion", date.getTime() + 300000);
 
         localStorage.setItem("libros", JSON.stringify(datos.libros));
+        
 
     } else {
         return false;
