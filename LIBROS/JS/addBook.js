@@ -8,8 +8,11 @@ function addBook(){
         if (libros[i].titulo.includes(formulario)){
             return alert("Este libro ya existe");
         }else{
-           // libros.push(formulario.value);
-            localStorage.setItem("libro","{id:" + (libros.length+1) + "}");
+            var librosLocal = localStorage.getItem("libros");
+            librosLocal.push("libro","{id:" + (libros.length+1) + "}");
+            console.log(librosLocal);
+            //"libro","{id:" + (libros.length+1) + "}"
+            localStorage.setItem(librosLocal);
         }
     }
     
