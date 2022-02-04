@@ -8,8 +8,8 @@ window.onload = function () {
         var li = document.createElement("li");
         li.setAttribute("class", "enlinea");
         var a = document.createElement("a");
-        a.setAttribute("href", "LIBROS/Buscador.html");
-        a.innerHTML = "Buscador";
+        a.setAttribute("href", "LIBROS/buscador.html");
+        a.innerHTML = "Libros";
         li.appendChild(a);
 
         document.getElementById("menuInicio").appendChild(li);
