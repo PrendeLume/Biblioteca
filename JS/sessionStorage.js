@@ -24,7 +24,7 @@ window.onload = function () {
     document.getElementById("cerrarSesion").addEventListener("click", function () {
         sessionStorage.clear();
         localStorage.clear();
-    })
+    });
 }();
 
 
@@ -54,7 +54,9 @@ function comprobarCredenciales() {
         sessionStorage.setItem("Conexion", date.getTime());
         sessionStorage.setItem("Expiracion", date.getTime() + 300000);
 
-        localStorage.setItem("libros", JSON.stringify(datos.libros));
+        for (let i = 0; i < datos.libros.length; i++) {
+            localStorage.setItem("libro " + datos.libros[i].id, JSON.stringify(datos.libros[i]));
+        }
         
 
     } else {

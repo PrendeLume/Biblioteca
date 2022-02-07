@@ -1,11 +1,24 @@
 window.onload = function () {
     document.forms['busqueda']['busquedaTitulo'].addEventListener('keyup', busquedaLibros);
     distribuirLibros(datos.libros);
+
+    alert(document.getElementsByClassName("borrarLibro").length);
+    for (const libro of document.getElementsByClassName("borrarLibro")) {
+        libro.addEventListener("click", borrarLibro);
+    }
+    
 };
 
 function busquedaLibros() {
     //var libros = datos.libros;
-    var libros = JSON.parse(localStorage.getItem(libros));
+    var libros = [];
+    for (const iterator of localStorage.key) {
+        if(localStorage.key.includes("libro")){
+            libros.push(iterator);
+            console.log(iterator);
+        }
+    }
+     
     var abuscar = document.forms['busqueda']['busquedaTitulo'].value;
     var aux = [];
 
@@ -30,6 +43,7 @@ function distribuirLibros(libros) {
         //creacion del articulo
         var articulo = document.createElement("article");
         articulo.setAttribute("class", "col-2 gris-claro");
+        articulo.setAttribute("id", libros[i].id);
         //creacion del div(card)
         var div = document.createElement("div")
 
@@ -57,8 +71,8 @@ function distribuirLibros(libros) {
 
         // creacion del boton 'eliminar'
         var botonEliminar = document.createElement("a");
-        botonEliminar.setAttribute("class", "btn d-flex justify-content-around btn-danger mt-2");
-        botonEliminar.setAttribute("href", "#");
+        botonEliminar.setAttribute("class", "btn d-flex justify-content-around btn-danger mt-2 borrarLibro");
+
         botonEliminar.innerHTML = "Eliminar";
 
         //añadir todo
@@ -75,3 +89,11 @@ function distribuirLibros(libros) {
         document.getElementById("libros").appendChild(row);
     }
 };
+
+
+function borrarLibro(){
+    console.log(this.parentNode.parentNode.parentNode.id);
+    confirm("Quiere borrar este libro??");
+    localStorage.removeItem("libro " + this.parentNode.parentNode.parentNode.id);
+    distribuirLibros(localStorage.getItem("libro"));
+}
