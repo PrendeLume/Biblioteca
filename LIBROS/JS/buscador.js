@@ -10,12 +10,8 @@ window.onload = function () {
 };
 
 function busquedaLibros() {
-    var libros = [];
-    for (let i = 0; i < localStorage.length; i++) {
-        libros[i] = JSON.parse(localStorage.getItem("libro " + (i)));
-        console.log(i);
-    }
-    console.log(libros);
+    var libros = JSON.parse(localStorage.getItem("libros"));
+    
     var abuscar = document.forms['busqueda']['busquedaTitulo'].value;
     var aux = [];
 
@@ -28,7 +24,6 @@ function busquedaLibros() {
         
             
     }
-    console.log(aux);
     distribuirLibros(aux);
 };
 
