@@ -1,45 +1,48 @@
 window.onload = function () {
     document.forms['busqueda']['busquedaTitulo'].addEventListener('keyup', busquedaLibros);
-    distribuirLibros(datos.libros);
+    var libros = JSON.parse(localStorage.getItem("libros"));
+    distribuirLibros(libros);
 
-    alert(document.getElementsByClassName("borrarLibro").length);
     for (const libro of document.getElementsByClassName("borrarLibro")) {
         libro.addEventListener("click", borrarLibro);
     }
-    
+
 };
 
 function busquedaLibros() {
-    //var libros = datos.libros;
     var libros = [];
-    for (const iterator of localStorage.key) {
-        if(localStorage.key.includes("libro")){
-            libros.push(iterator);
-            console.log(iterator);
-        }
+    for (let i = 0; i < localStorage.length; i++) {
+        libros[i] = JSON.parse(localStorage.getItem("libro " + (i)));
+        console.log(i);
     }
-     
+    console.log(libros);
     var abuscar = document.forms['busqueda']['busquedaTitulo'].value;
     var aux = [];
 
-    for (var i=0; i< libros.length; i++) {
-        if (libros[i].titulo.includes(abuscar))
-            aux.push(libros[i]);
+    for (var i = 0; i < libros.length; i++) {
+        if(libros[i] !== null){
+            if (libros[i].titulo.includes(abuscar)){
+                aux.push(libros[i]);
+            }
+        }
+        
+            
     }
-
-    distribuirLibros(aux);       
+    console.log(aux);
+    distribuirLibros(aux);
 };
 
 function distribuirLibros(libros) {
+    //Limpiamos pantalla
     document.getElementById("libros").innerHTML = "";
-
+    
     for (let i = 0; i < libros.length; i++) {
         //Creacion filas
         if (i % 6 == 0) {
             var row = document.createElement("section");
             row.setAttribute("class", "row separacionTop");
         }
-        1
+        
         //creacion del articulo
         var articulo = document.createElement("article");
         articulo.setAttribute("class", "col-2 gris-claro");
@@ -64,15 +67,15 @@ function distribuirLibros(libros) {
         descripcion.setAttribute("class", "card-text");
         descripcion.innerHTML = libros[i].descripcion;
         // creacion del boton 'Modificar'
-        var botonModificar = document.createElement("a");
+        var botonModificar = document.createElement("button");
         botonModificar.setAttribute("class", "btn d-flex justify-content-around btn-warning");
         botonModificar.setAttribute("href", "#");
         botonModificar.innerHTML = "Modificar";
 
         // creacion del boton 'eliminar'
-        var botonEliminar = document.createElement("a");
-        botonEliminar.setAttribute("class", "btn d-flex justify-content-around btn-danger mt-2 borrarLibro");
-
+        var botonEliminar = document.createElement("button");
+        botonEliminar.setAttribute("class", "btn d-flex justify-content-around btn-danger mt-2");
+        botonEliminar.addEventListener("click", function(){borrarLibro(libros[i].id)});
         botonEliminar.innerHTML = "Eliminar";
 
         //añadir todo
@@ -83,17 +86,29 @@ function distribuirLibros(libros) {
         div.appendChild(imagen);
         div.appendChild(divBody);
         articulo.appendChild(div);
-        //console.log(articulo);
         row.appendChild(articulo);
-        
+
         document.getElementById("libros").appendChild(row);
     }
 };
 
 
-function borrarLibro(){
-    console.log(this.parentNode.parentNode.parentNode.id);
-    confirm("Quiere borrar este libro??");
-    localStorage.removeItem("libro " + this.parentNode.parentNode.parentNode.id);
-    distribuirLibros(localStorage.getItem("libro"));
+function borrarLibro(id) {
+    var libros = JSON.parse(localStorage.getItem("libros"));
+    var pos = undefined;
+    for (let i = 0; i < libros.length; i++) {
+        if(libros[i].id === id){
+            pos = i;
+            break;
+        }
+    }
+
+    if (pos) {
+        libros.splice(pos, 1);
+    } else {
+        console.error ("MAL");
+    }
+    localStorage.setItem("libros", JSON.stringify(libros));
+    
+    distribuirLibros(libros);
 }

@@ -20,7 +20,7 @@ window.onload = function () {
     if (sessionStorage.getItem('Expiracion') == (new Date().getTime())) {
         sessionStorage.clear();
     }
-    
+
     document.getElementById("cerrarSesion").addEventListener("click", function () {
         sessionStorage.clear();
         localStorage.clear();
@@ -48,18 +48,15 @@ function comprobarCredenciales() {
     //Comprobamos si la contraseña es correcta y la guardamos en el sesionStorage
     var date = new Date;
     if (usuarioCorrecto && contraseñaCorrecto) {
-        console.log("Llego");
         sessionStorage.setItem("nombre_usuario", usuarioCorrecto.nombre);
         sessionStorage.setItem("contraseña_usuario", usuarioCorrecto.contraseña);
         sessionStorage.setItem("Conexion", date.getTime());
         sessionStorage.setItem("Expiracion", date.getTime() + 300000);
 
-        for (let i = 0; i < datos.libros.length; i++) {
-            localStorage.setItem("libro " + datos.libros[i].id, JSON.stringify(datos.libros[i]));
-        }
-        
+        localStorage.setItem("libros", JSON.stringify(datos.libros));
 
     } else {
+        alert("El usuario o la contraseña incorrectas");
         return false;
     }
 
