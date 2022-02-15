@@ -1,5 +1,5 @@
 window.onload = function () {
-    document.forms['busqueda']['busquedaTitulo'].addEventListener('keyup', busquedaLibros);
+    document.getElementById("busquedaTitulo").addEventListener('keyup', busquedaLibros);
     var libros = JSON.parse(localStorage.getItem("libros"));
     distribuirLibros(libros);
 

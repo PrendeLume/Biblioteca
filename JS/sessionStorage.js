@@ -5,11 +5,32 @@ window.onload = function () {
         document.getElementById("botonSesion").innerHTML = sessionStorage.getItem("nombre_usuario");
 
         /* creacion del boton busqueda */
+        //Libros
         var li = document.createElement("li");
         li.setAttribute("class", "enlinea");
         var a = document.createElement("a");
-        a.setAttribute("href", "LIBROS/buscador.html");
+        console.log(window.location.href);
+        if (window.location.href.includes("LIBROS")) {
+            a.setAttribute("href", "libros.html");
+        } else {
+
+            a.setAttribute("href", "LIBROS/libros.html");
+        }
         a.innerHTML = "Libros";
+        li.appendChild(a);
+
+        document.getElementById("menuInicio").appendChild(li);
+        //Socios
+        var li = document.createElement("li");
+        li.setAttribute("class", "enlinea");
+        var a = document.createElement("a");
+        if (window.location.href.includes("LIBROS")) {
+            a.setAttribute("href", "#");
+        } else {
+
+            a.setAttribute("href", "#");
+        }
+        a.innerHTML = "Socios";
         li.appendChild(a);
 
         document.getElementById("menuInicio").appendChild(li);
