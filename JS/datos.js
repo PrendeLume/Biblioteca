@@ -7,7 +7,7 @@ var datos = (function () {
         ],
         
         libros: [
-            { id: 0, ISBN: '56849204-6', titulo: 'Mio Cid', autor: 'Per Abbat', editorial: 'galaxia', cantidad: 5, precio: 5.65, url: 'IMG/ejemplo.jpg', descripcion: 'Narra las aventuras del heroe español Mio Cid'},
+            { id: 0, ISBN: '56849204-6', titulo: 'Mio Cid', autor: 'Per Abbat', editorial: 'galaxia', cantidad: 5, precio: 5.65, url: 'IMG/El-Cantar-mio-Cid.jpg', descripcion: 'Narra las aventuras del heroe español Mio Cid'},
             { id: 1, ISBN: '56842334-6', titulo: 'Leyenda del tuerto', autor: 'Carlos', editorial: 'galaxia', cantidad: 3, precio: 7.00, url: 'IMG/ejemplo.jpg', descripcion: 'Cuenta la vida de un gran guerrero tuerto'},
             { id: 2, ISBN: '23842334-6', titulo: '50 sombras de Gray', autor: 'Pepito', editorial: 'galaxia', cantidad: 4, precio: 15.00, url: 'IMG/ejemplo.jpg', descripcion: 'Narra las aventuras sexuales de un millonario'},
             { id: 3, ISBN: '57542334-6', titulo: 'Hercules', autor: 'Desconocido', editorial: 'galaxia', cantidad: 8, precio: 4.00, url: 'IMG/ejemplo.jpg', descripcion: 'Cuenta las aventuras del hijo de zeus hercules'},
