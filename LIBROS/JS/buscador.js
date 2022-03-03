@@ -12,7 +12,7 @@ window.onload = function () {
 function busquedaLibros() {
     var libros = JSON.parse(localStorage.getItem("libros"));
     
-    var abuscar = document.forms['busqueda']['busquedaTitulo'].value;
+    var abuscar = document.getElementById('busquedaTitulo').value;
     var aux = [];
 
     for (var i = 0; i < libros.length; i++) {
