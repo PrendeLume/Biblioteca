@@ -36,12 +36,12 @@ window.onload = function () {
         document.getElementById("menuInicio").appendChild(li);
     } else {
         document.getElementById("cerrarSesion").remove();
-       /* if (window.location.href.includes("LIBROS")) {
-        
-        } else {
-
-            a.setAttribute("href", "#");
-        }*/
+        /* if (window.location.href.includes("LIBROS")) {
+         
+         } else {
+ 
+             a.setAttribute("href", "#");
+         }*/
     }
     console.log((new Date().getTime()));
     if (sessionStorage.getItem('Expiracion') == (new Date().getTime())) {

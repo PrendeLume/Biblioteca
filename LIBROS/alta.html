@@ -24,45 +24,51 @@
         </header>
         <main>
             <section class="row">
-                <nav class="navbar navbar-expand-md navbar-dark bg-dark col-12">
+                <nav class="navbar navbar-expand-md navbar-dark bg-dark col">
+
                     <a class="navbar-brand" href="../index.html">Inicio</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse"
-                        data-target="#navbarsExampleDefault">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
                     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-                        <ul class="navbar-nav mr-auto">
+                        <ul class="navbar-nav mr-auto" id="menuInicio">
 
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="dropdown01"
-                                    data-toggle="dropdown">Libros</a>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="libros.html">Busqueda</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="alta.html">Alta</a>
-                                    <a class="dropdown-item" href="#">Modificacion</a>
-                                    <a class="dropdown-item" href="#">Baja</a>
-                                </div>
-                            </li>
                         </ul>
+                        <div class="dropdown">
+                            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="botonSesion"
+                                data-toggle="dropdown">
+                                Sesion
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" href="../login.html" id="sesion">Iniciar Sesion</a>
+
+                                <a class="dropdown-item" href="../index.html" id="cerrarSesion">Cerrar Sesion</a>
+                            </div>
+                        </div>
+
                     </div>
                 </nav>
             </section>
             <main class="row ">
                 <section class="col">
+                    <!--Seguridad-->
+                    <script src="../JS/sessionStorage.js"></script>
+                    <!--Seguridad-->
                     <!--js-->
                     <script src="../JS/datos.js"></script>
                     <script src="JS/addBook.js"></script>
                     <!--js-->
                     <h2 class="row justify-content-center">Altas</h2>
                     <article class="row mt-2 mb-2 justify-content-center">
-                        
+
                         <form class="col-4 rounded" name="alta" onsubmit="addBook();">
                             <section class="row">
                                 <div class="col form-group">
                                     <label for="ISBN">ISBN</label>
-                                    <input id="ISBN" class="form-control" type="text" name="isbn" placeholder="Introduzca el ISBN">
+                                    <input id="ISBN" class="form-control" type="text" name="isbn"
+                                        placeholder="Introduzca el ISBN">
                                 </div>
                                 <div class="col form-group">
                                     <label for="titulo">Titulo</label>

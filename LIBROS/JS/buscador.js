@@ -11,18 +11,18 @@ window.onload = function () {
 
 function busquedaLibros() {
     var libros = JSON.parse(localStorage.getItem("libros"));
-    
+
     var abuscar = document.getElementById('busquedaTitulo').value;
     var aux = [];
 
     for (var i = 0; i < libros.length; i++) {
-        if(libros[i] !== null){
-            if (libros[i].titulo.includes(abuscar)){
+        if (libros[i] !== null) {
+            if (libros[i].titulo.includes(abuscar)) {
                 aux.push(libros[i]);
             }
         }
-        
-            
+
+
     }
     distribuirLibros(aux);
 };
@@ -30,14 +30,14 @@ function busquedaLibros() {
 function distribuirLibros(libros) {
     //Limpiamos pantalla
     document.getElementById("libros").innerHTML = "";
-    
+
     for (let i = 0; i < libros.length; i++) {
         //Creacion filas
         if (i % 6 == 0) {
             var row = document.createElement("section");
             row.setAttribute("class", "row separacionTop");
         }
-        
+
         //creacion del articulo
         var articulo = document.createElement("article");
         articulo.setAttribute("class", "col-2 gris-claro");
@@ -70,7 +70,7 @@ function distribuirLibros(libros) {
         // creacion del boton 'eliminar'
         var botonEliminar = document.createElement("button");
         botonEliminar.setAttribute("class", "btn d-flex justify-content-around btn-danger mt-2");
-        botonEliminar.addEventListener("click", function(){borrarLibro(libros[i].id)});
+        botonEliminar.addEventListener("click", function () { borrarLibro(libros[i].id) });
         botonEliminar.innerHTML = "Eliminar";
 
         //añadir todo
@@ -92,7 +92,7 @@ function borrarLibro(id) {
     var libros = JSON.parse(localStorage.getItem("libros"));
     var pos = undefined;
     for (let i = 0; i < libros.length; i++) {
-        if(libros[i].id === id){
+        if (libros[i].id === id) {
             pos = i;
             break;
         }
@@ -101,9 +101,9 @@ function borrarLibro(id) {
     if (pos) {
         libros.splice(pos, 1);
     } else {
-        console.error ("MAL");
+        console.error("MAL");
     }
     localStorage.setItem("libros", JSON.stringify(libros));
-    
+
     distribuirLibros(libros);
 }
