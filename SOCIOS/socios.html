@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <!-- META viewport: para adaptivilidad-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biclioteca</title>
+  <!--Insertamos CSS xeral-->
+  <link rel="stylesheet" href="../CSS/index.css">
+</head>
+
+<body>
+  <main class="container-fluid gris-claro">
+    <header class="row">
+      <section class="col">
+        <section class="row gris-titulo">
+          <h1 class="col">Biblioteca</h1>
+        </section>
+      </section>
+    </header>
+    <main>
+      <section class="row">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark col">
+
+          <a class="navbar-brand" href="../index.html">Inicio</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto" id="menuInicio">
+
+            </ul>
+            <div class="dropdown">
+              <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="botonSesion"
+                data-toggle="dropdown">
+                Sesion
+              </a>
+
+              <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" href="login.html" id="sesion">Iniciar Sesion</a>
+
+                <a class="dropdown-item" href="index.html" id="cerrarSesion">Cerrar Sesion</a>
+              </div>
+            </div>
+
+          </div>
+        </nav>
+      </section>
+
+      <section class="row">
+
+        <aside class="col-2">
+          <a role="button" class="btn btn-success mt-2 pl-5 pr-5" href="alta.html" id="addLibro"><strong>+ Añadir
+              socio</strong></a>
+        </aside>
+        <!--Busqueda por titulo-->
+        <input id="busquedaTitulo" class="form-control mr-sm-2 mt-2 col" type="text" placeholder="Busca por titulos"
+          autofocus>
+        <!--Busqueda por titulo-->
+
+
+
+      </section>
+      <section class="row">
+        <aside class="col-2">
+          <nav>
+            <li></li>
+
+          </nav>
+        </aside>
+        <section class="col-10" id="libros">
+
+
+        </section>
+      </section>
+    </main>
+    <footer class="row">
+      <section class="col azul-cielo border-top border-dark">
+        <p>dereitos de autor</p>
+      </section>
+    </footer>
+  </main>
+  <script src="../node_modules/jquery/dist/jquery.slim.min.js"></script>
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <!--Seguridad-->
+  <script src="../JS/sessionStorage.js"></script>
+  <!--Seguridad-->
+  <!--Aqui van los libros-->
+  <script src="../JS/datos.js"></script>
+  <script src="JS/buscador.js"></script>
+  <!--Aqui van los libros-->
+</body>
+
+</html>

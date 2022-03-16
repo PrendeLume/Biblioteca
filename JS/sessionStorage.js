@@ -25,10 +25,10 @@ window.onload = function () {
         li.setAttribute("class", "enlinea");
         var a = document.createElement("a");
         if (window.location.href.includes("LIBROS")) {
-            a.setAttribute("href", "#");
+            a.setAttribute("href", "../SOCIOS/socios.html");
         } else {
 
-            a.setAttribute("href", "#");
+            a.setAttribute("href", "./socios.html");
         }
         a.innerHTML = "Socios";
         li.appendChild(a);
