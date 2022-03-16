@@ -25,10 +25,10 @@ window.onload = function () {
         li.setAttribute("class", "enlinea");
         var a = document.createElement("a");
         if (window.location.href.includes("LIBROS")) {
-            a.setAttribute("href", "../SOCIOS/socios.html");
+            a.setAttribute("href", "./SOCIOS/socios.html");
         } else {
 
-            a.setAttribute("href", "./socios.html");
+            a.setAttribute("href", "./SOCIOS/socios.html");
         }
         a.innerHTML = "Socios";
         li.appendChild(a);
@@ -81,7 +81,7 @@ function comprobarCredenciales() {
         sessionStorage.setItem("Expiracion", date.getTime() + 300000);
 
         localStorage.setItem("libros", JSON.stringify(datos.libros));
-
+        localStorage.setItem("socios", JSON.stringify(datos.socios));
     } else {
         alert("El usuario o la contraseña incorrectas");
         return false;

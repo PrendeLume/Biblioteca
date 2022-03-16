@@ -15,6 +15,17 @@ var datos = (function () {
             { id: 5, ISBN: '51942334-6', titulo: 'Una muerte anunciada', autor: 'Vikingos', editorial: 'galaxia', cantidad: 10, precio: 0.70, url: 'IMG/ejemplo.jpg', descripcion: 'Narra las grandes batallas llevadas a cabo por el hijo de Odin' },
             { id: 6, ISBN: '51942334-6', titulo: 'Como volar por el cielo', autor: 'Vikingos', editorial: 'galaxia', cantidad: 10, precio: 0.70, url: 'IMG/ejemplo.jpg', descripcion: 'Narra las grandes batallas llevadas a cabo por el hijo de Odin' },
             { id: 7, ISBN: '51942334-6', titulo: 'hajime no ippo', autor: 'Vikingos', editorial: 'galaxia', cantidad: 10, precio: 0.70, url: 'IMG/ejemplo.jpg', descripcion: 'Narra las grandes batallas llevadas a cabo por el hijo de Odin' }
+        ],
+
+        socios: [
+            { id: 0, DNI: '56849204-N', nombre: 'Jose ', autor: 'Per Abbat', editorial: 'galaxia', cantidad: 5, precio: 5.65, url: 'IMG/El-Cantar-mio-Cid.jpg', descripcion: 'Narra las aventuras del heroe español Mio Cid' },
+            { id: 1, DNI: '56842334-M', nombre: 'Leyenda del tuerto', autor: 'Carlos', editorial: 'galaxia', cantidad: 3, precio: 7.00, url: 'IMG/ejemplo.jpg', descripcion: 'Cuenta la vida de un gran guerrero tuerto' },
+            { id: 2, DNI: '23842334-L', nombre: '50 sombras de Gray', autor: 'Pepito', editorial: 'galaxia', cantidad: 4, precio: 15.00, url: 'IMG/ejemplo.jpg', descripcion: 'Narra las aventuras sexuales de un millonario' },
+            { id: 3, DNI: '57542334-P', nombre: 'Hercules', autor: 'Desconocido', editorial: 'galaxia', cantidad: 8, precio: 4.00, url: 'IMG/ejemplo.jpg', descripcion: 'Cuenta las aventuras del hijo de zeus hercules' },
+            { id: 4, DNI: '51942334-O', nombre: 'Leyenda del thor', autor: 'Vikingos', editorial: 'galaxia', cantidad: 10, precio: 0.70, url: 'IMG/ejemplo.jpg', descripcion: 'Narra las grandes batallas llevadas a cabo por el hijo de Odin' },
+            { id: 5, DNI: '51942334-Q', nombre: 'Una muerte anunciada', autor: 'Vikingos', editorial: 'galaxia', cantidad: 10, precio: 0.70, url: 'IMG/ejemplo.jpg', descripcion: 'Narra las grandes batallas llevadas a cabo por el hijo de Odin' },
+            { id: 6, DNI: '51942334-R', nombre: 'Como volar por el cielo', autor: 'Vikingos', editorial: 'galaxia', cantidad: 10, precio: 0.70, url: 'IMG/ejemplo.jpg', descripcion: 'Narra las grandes batallas llevadas a cabo por el hijo de Odin' },
+            { id: 7, DNI: '51942334-S', nombre: 'hajime no ippo', autor: 'Vikingos', editorial: 'galaxia', cantidad: 10, precio: 0.70, url: 'IMG/ejemplo.jpg', descripcion: 'Narra las grandes batallas llevadas a cabo por el hijo de Odin' }
         ]
 
     };
