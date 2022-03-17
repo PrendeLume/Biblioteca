@@ -90,21 +90,24 @@ function distribuirLibros(libros) {
 
 
 function borrarLibro(id) {
-    var libros = JSON.parse(localStorage.getItem("libros"));
-    var pos = undefined;
-    for (let i = 0; i < libros.length; i++) {
-        if (libros[i].id === id) {
-            pos = i;
-            break;
+    if (window.confirm("Esta seguro de que desea borrarlo")) {
+        var libros = JSON.parse(localStorage.getItem("libros"));
+        var pos = undefined;
+        for (let i = 0; i < libros.length; i++) {
+            if (libros[i].id === id) {
+                pos = i;
+                break;
+            }
         }
+
+        if (pos) {
+            libros.splice(pos, 1);
+        } else {
+            console.error("MAL");
+        }
+        localStorage.setItem("libros", JSON.stringify(libros));
+
+        distribuirLibros(libros);
     }
 
-    if (pos) {
-        libros.splice(pos, 1);
-    } else {
-        console.error("MAL");
-    }
-    localStorage.setItem("libros", JSON.stringify(libros));
-
-    distribuirLibros(libros);
 }

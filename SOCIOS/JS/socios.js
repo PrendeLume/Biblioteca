@@ -86,6 +86,7 @@ function distribuirLibros(socios) {
 
 
 function borrarLibro(id) {
+    if (window.confirm("Esta seguro de que desea borrarlo")) {
     var socios = JSON.parse(localStorage.getItem("socios"));
     var pos = undefined;
     for (let i = 0; i < socios.length; i++) {
@@ -103,4 +104,5 @@ function borrarLibro(id) {
     localStorage.setItem("socios", JSON.stringify(socios));
 
     distribuirLibros(socios);
+}
 }
