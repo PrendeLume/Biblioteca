@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <!-- META viewport: para adaptivilidad-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biclioteca</title>
+    <!--Insertamos CSS xeral-->
+    <link rel="stylesheet" href="../CSS/index.css">
+
+</head>
+
+<body>
+    <main class="container-fluid gris-claro">
+        <header class="row">
+            <section class="col">
+                <section class="row gris-titulo">
+                    <h1 class="col">Biblioteca</h1>
+                </section>
+            </section>
+        </header>
+        <main>
+            <section class="row">
+                <nav class="navbar navbar-expand-md navbar-dark bg-dark col">
+
+                    <a class="navbar-brand" href="../index.html">Inicio</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                        <ul class="navbar-nav mr-auto" id="menuInicio">
+
+                        </ul>
+                        <div class="dropdown">
+                            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="botonSesion"
+                                data-toggle="dropdown">
+                                Sesion
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" href="../login.html" id="sesion">Iniciar Sesion</a>
+
+                                <a class="dropdown-item" href="../index.html" id="cerrarSesion">Cerrar Sesion</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </nav>
+            </section>
+            <main class="row ">
+                <section class="col">
+                    <!--Seguridad-->
+                    <script src="../JS/sessionStorage.js"></script>
+                    <!--Seguridad-->
+                    <!--js-->
+                    <script src="../JS/datos.js"></script>
+                    <script src="JS/addSocio.js"></script>
+                    <!--js-->
+                    <h2 class="row mt-4 justify-content-center">Modificar socio</h2>
+                    <article class="row mt-2 mb-2 justify-content-center">
+
+                        <form class="col-4 rounded" name="alta" onsubmit="addSocio();">
+                            <section class="row">
+                                <div class="col form-group">
+                                    <label for="dni">DNI</label>
+                                    <input id="dni" class="form-control" type="text" name="dni"
+                                        placeholder="Introduzca el DNI">
+                                </div>
+                                <div class="col form-group">
+                                    <label for="nombre">Nombre</label>
+                                    <input id="nombre" class="form-control" type="text" name="nombre"
+                                        placeholder="Introduzca el Nombre">
+                                </div>
+                                <div class="col form-group">
+                                    <label for="apellido">Apellido</label>
+                                    <input id="apellido" class="form-control" name="apellido" type="text"
+                                        placeholder="Introduzca el Apellido">
+                                </div>
+                            </section>
+                            <div class="btn-group-toggle float-right mt-2">
+                                <button type="submit" class="btn btn-primary">Enviar</button>
+                            </div>
+                        </form>
+                    </article>
+                </section>
+            </main>
+            
+        </main>
+        <script src="../node_modules/jquery/dist/jquery.slim.min.js"></script>
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

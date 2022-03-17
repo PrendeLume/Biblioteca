@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <!-- META viewport: para adaptivilidad-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biclioteca</title>
+    <!--Insertamos CSS xeral-->
+    <link rel="stylesheet" href="../CSS/index.css">
+
+</head>
+
+<body>
+    <main class="container-fluid gris-claro">
+        <header class="row">
+            <section class="col">
+                <section class="row gris-titulo">
+                    <h1 class="col">Biblioteca</h1>
+                </section>
+            </section>
+        </header>
+        <main>
+            <section class="row">
+                <nav class="navbar navbar-expand-md navbar-dark bg-dark col">
+
+                    <a class="navbar-brand" href="../index.html">Inicio</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                        <ul class="navbar-nav mr-auto" id="menuInicio">
+
+                        </ul>
+                        <div class="dropdown">
+                            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="botonSesion"
+                                data-toggle="dropdown">
+                                Sesion
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" href="../login.html" id="sesion">Iniciar Sesion</a>
+
+                                <a class="dropdown-item" href="../index.html" id="cerrarSesion">Cerrar Sesion</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </nav>
+            </section>
+            <main class="row ">
+                <section class="col">
+                    <!--Seguridad-->
+                    <script src="../JS/sessionStorage.js"></script>
+                    <!--Seguridad-->
+                    <!--js-->
+                    <script src="../JS/datos.js"></script>
+                    <script src="JS/addBook.js"></script>
+                    <!--js-->
+                    <h2 class="row mt-4 justify-content-center">Modificar Libros</h2>
+                    <article class="row mt-2 mb-2 justify-content-center">
+
+                        <form class="col-4 rounded" id="alta" action="#" name="alta" onsubmit="return addBook();">
+                            <section class="row">
+                                <div class="col form-group">
+                                    <label for="ISBN">ISBN</label>
+                                    <input id="ISBN" class="form-control" type="text" name="isbn"
+                                        placeholder="Introduzca el ISBN">
+                                </div>
+                                <div class="col form-group">
+                                    <label for="titulo">Titulo</label>
+                                    <input id="titulo" class="form-control" name="titulo" type="text"
+                                        placeholder="Introduzca el Titulo">
+                                </div>
+                            </section>
+                            <section class="row">
+                                <div class="col form-group">
+                                    <label for="autor">Autor</label>
+                                    <input id="autor" class="form-control" name="autor" type="text"
+                                        placeholder="Introduzca al autor">
+                                </div>
+                                <div class="col form-group">
+                                    <label for="Editorial">Editorial</label>
+                                    <input id="Editorial" class="form-control" type="text" name="editorial"
+                                        placeholder="Introduzca la editorial">
+                                </div>
+                            </section>
+                            <section class="row">
+                                <section class="col">
+                                    <section class="row">
+                                        <div class="col form-group">
+                                            <label for="cantidad">Cantidad</label>
+                                            <input id="cantidad" class="form-control" type="number" name="cantidad"
+                                                placeholder="00">
+                                        </div>
+                                    </section>
+                                    <section class="row">
+                                        <div class="col form-group mt-2">
+                                            <label for="precio">Precio</label>
+                                            <input id="precio" class="form-control" type="number" name="precio"
+                                                placeholder="Introduzca el precio">
+                                        </div>
+                                    </section>
+                                </section>
+                                <section class="col">
+                                    <div class="form-group">
+                                        <label for="exampleFormControlTextarea1">Descripcion</label>
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" name="descripcion"
+                                            placeholder=""></textarea>
+                                    </div>
+                                </section>
+                            </section>
+                            <div class="col mt-1 custom-file">
+                                <input type="file" class="custom-file-input" id="customFile">
+                                <label class="custom-file-label" for="customFile">Portada del libro</label>
+                            </div>
+                            <div class="btn-group-toggle float-right mt-2">
+                                <button type="submit" class="btn btn-primary">Enviar</button>
+                            </div>
+                        </form>
+                    </article>
+                </section>
+            </main>
+            
+        </main>
+        <script src="../node_modules/jquery/dist/jquery.slim.min.js"></script>
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

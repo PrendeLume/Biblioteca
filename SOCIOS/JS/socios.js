@@ -61,7 +61,7 @@ function distribuirLibros(socios) {
         // creacion del boton 'Modificar'
         var botonModificar = document.createElement("a");
         botonModificar.setAttribute("class", "btn boton d-flex justify-content-around btn-warning");
-        botonModificar.setAttribute("href", "altaSocio.html");
+        botonModificar.setAttribute("href", "modificarSocio.html");
         botonModificar.innerHTML = "Modificar";
 
         // creacion del boton 'eliminar'
