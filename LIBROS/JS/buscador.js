@@ -64,7 +64,7 @@ function distribuirLibros(libros) {
         // creacion del boton 'Modificar'
         var botonModificar = document.createElement("button");
         botonModificar.setAttribute("class", "btn d-flex justify-content-around btn-warning");
-        botonModificar.setAttribute("href", "#");
+        botonModificar.setAttribute("href", "alta.html");
         botonModificar.innerHTML = "Modificar";
 
         // creacion del boton 'eliminar'
