@@ -1,4 +1,4 @@
-var i= 5;
+var i= 4;
 function addBook(){
     
     var formulario = document.alta;
