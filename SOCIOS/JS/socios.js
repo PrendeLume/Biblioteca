@@ -40,7 +40,7 @@ function distribuirLibros(socios) {
 
         //creacion del articulo
         var articulo = document.createElement("article");
-        articulo.setAttribute("class", "col-2 gris-claro");
+        articulo.setAttribute("class", "col-3 gris-claro");
         articulo.setAttribute("id", socios[i].id);
         //creacion del div(card)
         var div = document.createElement("div")
@@ -56,11 +56,8 @@ function distribuirLibros(socios) {
         //creacion del titulo
         var titulo = document.createElement("h5");
         titulo.setAttribute("class", "card-title");
-        titulo.innerHTML = socios[i].nombre;
-        // creacion descripcion
-        var descripcion = document.createElement("p");
-        descripcion.setAttribute("class", "card-text");
-        descripcion.innerHTML = socios[i].descripcion;
+        titulo.innerHTML = socios[i].nombre + " " + socios[i].apellido;
+        
         // creacion del boton 'Modificar'
         var botonModificar = document.createElement("button");
         botonModificar.setAttribute("class", "btn d-flex justify-content-around btn-warning");
@@ -75,7 +72,6 @@ function distribuirLibros(socios) {
 
         //añadir todo
         divBody.appendChild(titulo);
-        divBody.appendChild(descripcion);
         divBody.appendChild(botonModificar);
         divBody.appendChild(botonEliminar);
         div.appendChild(imagen);
@@ -89,21 +85,21 @@ function distribuirLibros(socios) {
 
 
 function borrarLibro(id) {
-    var libros = JSON.parse(localStorage.getItem("libros"));
+    var socios = JSON.parse(localStorage.getItem("socios"));
     var pos = undefined;
-    for (let i = 0; i < libros.length; i++) {
-        if (libros[i].id === id) {
+    for (let i = 0; i < socios.length; i++) {
+        if (socios[i].id === id) {
             pos = i;
             break;
         }
     }
 
     if (pos) {
-        libros.splice(pos, 1);
+        socios.splice(pos, 1);
     } else {
         console.error("MAL");
     }
-    localStorage.setItem("libros", JSON.stringify(libros));
+    localStorage.setItem("socios", JSON.stringify(socios));
 
-    distribuirLibros(libros);
+    distribuirLibros(socios);
 }
