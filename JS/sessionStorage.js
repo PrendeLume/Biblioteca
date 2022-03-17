@@ -12,6 +12,8 @@ window.onload = function () {
         console.log(window.location.href);
         if (window.location.href.includes("LIBROS")) {
             a.setAttribute("href", "libros.html");
+        } else if(window.location.href.includes("SOCIOS")){
+            a.setAttribute("href", "../LIBROS/libros.html");
         } else {
 
             a.setAttribute("href", "LIBROS/libros.html");
@@ -25,10 +27,12 @@ window.onload = function () {
         li.setAttribute("class", "enlinea");
         var a = document.createElement("a");
         if (window.location.href.includes("LIBROS")) {
-            a.setAttribute("href", "./SOCIOS/socios.html");
+            a.setAttribute("href", "../SOCIOS/socios.html");
+        }else if(window.location.href.includes("SOCIOS")){
+            a.setAttribute("href", "socios.html");
         } else {
 
-            a.setAttribute("href", "./SOCIOS/socios.html");
+            a.setAttribute("href", "SOCIOS/socios.html");
         }
         a.innerHTML = "Socios";
         li.appendChild(a);
