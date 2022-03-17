@@ -45,7 +45,7 @@ function distribuirLibros(libros) {
         articulo.setAttribute("id", libros[i].id);
         //creacion del div(card)
         var div = document.createElement("div")
-
+        div.setAttribute("id", libros[i].id);
         div.setAttribute("class", "card");
         //creacion de la imagen
         var imagen = document.createElement("img");
@@ -67,6 +67,8 @@ function distribuirLibros(libros) {
         botonModificar.setAttribute("class", "btn boton d-flex justify-content-around btn-warning");
         botonModificar.setAttribute("href", "modificarLibros.html");
         botonModificar.innerHTML = "Modificar";
+        botonModificar.addEventListener("click", function () { modificar(libros[i].id) });
+        
 
         // creacion del boton 'eliminar'
         var botonEliminar = document.createElement("button");
@@ -110,4 +112,8 @@ function borrarLibro(id) {
         distribuirLibros(libros);
     }
 
+}
+
+function modificar(id){
+    localStorage.setItem("libroModificar", id);
 }

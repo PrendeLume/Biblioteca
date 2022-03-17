@@ -64,7 +64,8 @@ function distribuirLibros(socios) {
         botonModificar.setAttribute("class", "btn boton d-flex justify-content-around btn-warning");
         botonModificar.setAttribute("href", "modificarSocio.html");
         botonModificar.innerHTML = "Modificar";
-
+        botonModificar.addEventListener("click", function () { modificar(socios[i].id) });
+        
         // creacion del boton 'eliminar'
         var botonEliminar = document.createElement("button");
         botonEliminar.setAttribute("class", "btn boton d-flex justify-content-around btn-danger mt-2");
@@ -105,4 +106,7 @@ function borrarLibro(id) {
 
         distribuirLibros(socios);
     }
+}
+function modificar(id){
+    localStorage.setItem("socioModificar", id);
 }

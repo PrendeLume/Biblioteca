@@ -14,10 +14,7 @@ function addBook(){
         }
     }
 
-    console.warn(formulario.url)
-
     if((formulario.cantidad.value != undefined) && (formulario.precio.value != undefined)){
-        //nuevoLibro = nuevoLibro.replace(']', ',{"id":'+(++idLibro)+',"ISBN":"'+formulario.isbn.value+'","titulo":"'+formulario.titulo.value+'","autor":"'+formulario.autor.value+'","editorial":"'+formulario.editorial.value+'","cantidad":"'+formulario.cantidad.value+'","precio":'+formulario.precio.value+',"url":"IMG/El-Cantar-mio-Cid.jpg","descripcion":"'+formulario.descripcion.value+'"}]');
         var nuevoLibro = {
             id: libros.length,
             ISBN: formulario.isbn.value,
@@ -39,4 +36,24 @@ function addBook(){
     localStorage.setItem("libros", JSON.stringify(libros));
     alert("Completado");
     return true;
+}
+
+window.onload = modificar;
+function modificar(){
+    var libroModificar = localStorage.getItem("libroModificar");
+    if(libroModificar != undefined){
+
+        var formulario = document.forms["modificar"].elements;
+        var libros = JSON.parse(localStorage.getItem("libros"));
+        console.warn(libros);
+        formulario.isbn.value = libros[libroModificar].ISBN;
+        formulario.titulo.value = libros[libroModificar].titulo;
+        formulario.autor.value = libros[libroModificar].autor;
+        formulario.editorial.value = libros[libroModificar].editorial;
+        formulario.cantidad.value = libros[libroModificar].cantidad;
+        formulario.precio.value = libros[libroModificar].precio;
+        //formulario.url.value;
+        formulario.descripcion.value = libros[libroModificar].descripcion;
+    }
+   
 }

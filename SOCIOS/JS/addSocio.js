@@ -23,3 +23,18 @@ function addBook(){
         return alert("Ha surgido un error inesperado");
     }
 }
+
+window.onload = modificar;
+function modificar(){
+    var socioModificar = localStorage.getItem("socioModificar");
+    if(socioModificar != undefined){
+
+        var formulario = document.forms["modificar"].elements;
+        var socios = JSON.parse(localStorage.getItem("socios"));
+        console.warn(socios);
+        formulario.dni.value = socios[socioModificar].DNI;
+        formulario.nombre.value = socios[socioModificar].nombre;
+        formulario.apellido.value = socios[socioModificar].apellido;
+    }
+   
+}

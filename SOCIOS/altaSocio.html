@@ -63,24 +63,32 @@
                     <h2 class="row mt-4 justify-content-center">Alta socio</h2>
                     <article class="row mt-2 mb-2 justify-content-center">
 
-                        <form class="col-4 rounded" name="alta" onsubmit="addSocio();">
+                        <form class="col-4 rounded" name="modificar" onsubmit="addSocio();">
                             <section class="row">
+                                <div class="col form-group">
+                                    <label for="codigo">Codigo</label>
+                                    <input id="codigo" class="form-control" type="text" name="codigo"
+                                        placeholder="Codigo">
+                                </div>
                                 <div class="col form-group">
                                     <label for="dni">DNI</label>
                                     <input id="dni" class="form-control" type="text" name="dni"
-                                        placeholder="Introduzca el DNI">
+                                        placeholder="111111111-N">
                                 </div>
+                                
+                            </section>
+                            <section class="row">
                                 <div class="col form-group">
                                     <label for="nombre">Nombre</label>
                                     <input id="nombre" class="form-control" type="text" name="nombre"
-                                        placeholder="Introduzca el Nombre">
+                                        placeholder="Nombre">
                                 </div>
                                 <div class="col form-group">
                                     <label for="apellido">Apellido</label>
                                     <input id="apellido" class="form-control" name="apellido" type="text"
-                                        placeholder="Introduzca el Apellido">
+                                        placeholder="Apellido">
                                 </div>
-                            </section>
+                                </section>
                             <div class="btn-group-toggle float-right mt-2">
                                 <button type="submit" class="btn btn-primary">Enviar</button>
                             </div>
