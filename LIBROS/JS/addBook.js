@@ -23,7 +23,7 @@ function addBook(){
             editorial: formulario.editorial.value,
             cantidad: formulario.cantidad.value,
             precio: formulario.precio.value,
-            url: "",
+            url: "IMG/ejemplo.jpg",
             descripcion: formulario.descripcion.value
         };
         libros.push(nuevoLibro);
@@ -53,6 +53,7 @@ function modificar(){
         formulario.cantidad.value = libros[libroModificar].cantidad;
         formulario.precio.value = libros[libroModificar].precio;
         formulario.descripcion.value = libros[libroModificar].descripcion;
+        
     }
    
     localStorage.removeItem("libroModificar");

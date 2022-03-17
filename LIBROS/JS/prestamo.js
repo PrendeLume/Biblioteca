@@ -26,6 +26,7 @@ function comprobar() {
         if (formulario.dni.value == socios[i].DNI) {
             formulario.nombre.value = socios[i].nombre;
             formulario.apellido.value = socios[i].apellido;
+            formulario.codigo.value = socios[i].codigo;
             existe = true;
             break;
         }

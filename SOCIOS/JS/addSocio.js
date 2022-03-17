@@ -7,7 +7,7 @@ function addBook(){
     var existe = true;
     for (var i=0; i< socios.length; i++) {
         if (socios[i].DNI.includes(formulario.dni.value)){
-            return alert("Este libro ya existe");
+            return alert("Este socio ya existe");
         }else{
             existe = false;
             
@@ -32,7 +32,7 @@ function addSocio(){
     
     for (var i=0; i< socios.length; i++) {
         if (socios[i].DNI.includes(formulario.dni.value)){
-            alert("Este libro ya existe");
+            alert("Este socio ya existe");
             return false;
         }
     }

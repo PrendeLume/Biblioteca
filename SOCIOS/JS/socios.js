@@ -58,7 +58,10 @@ function distribuirLibros(socios) {
         var titulo = document.createElement("h5");
         titulo.setAttribute("class", "card-title");
         titulo.innerHTML = socios[i].nombre + " " + socios[i].apellido;
-
+        //Codigo
+        var descripcion = document.createElement("p");
+        descripcion.setAttribute("class", "card-text");
+        descripcion.innerHTML = socios[i].codigo;
         // creacion del boton 'Modificar'
         var botonModificar = document.createElement("a");
         botonModificar.setAttribute("class", "btn boton d-flex justify-content-around btn-warning");
@@ -74,6 +77,7 @@ function distribuirLibros(socios) {
 
         //añadir todo
         divBody.appendChild(titulo);
+        divBody.appendChild(descripcion);
         divBody.appendChild(botonModificar);
         divBody.appendChild(botonEliminar);
         div.appendChild(imagen);
@@ -98,7 +102,7 @@ function borrarLibro(id) {
         }
 
         if (pos) {
-            socios.splice(pos, 1);
+            socios.splice(iposd, 1);
         } else {
             console.error("MAL");
         }
