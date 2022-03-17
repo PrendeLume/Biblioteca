@@ -23,6 +23,10 @@ var datos = (function () {
             { id: 2, DNI: '23842334-L', nombre: 'LOpez', apellido: 'Pepito', url: 'IMG/ejemplo.jpg'},
             { id: 3, DNI: '57542334-P', nombre: 'Paco', apellido: 'Desconocido', url: 'IMG/ejemplo.jpg'},
             { id: 4, DNI: '51942334-O', nombre: 'pepito', apellido: 'Vikingos', url: 'IMG/ejemplo.jpg'},
+        ],
+
+        prestamos: [
+            
         ]
 
     };
