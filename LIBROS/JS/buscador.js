@@ -62,7 +62,7 @@ function distribuirLibros(libros) {
         descripcion.setAttribute("class", "card-text");
         descripcion.innerHTML = libros[i].descripcion;
         // creacion del boton 'Modificar'
-        var botonModificar = document.createElement("button");
+        var botonModificar = document.createElement("a");
         botonModificar.setAttribute("class", "btn d-flex justify-content-around btn-warning");
         botonModificar.setAttribute("href", "alta.html");
         botonModificar.innerHTML = "Modificar";

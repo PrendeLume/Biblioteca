@@ -59,9 +59,9 @@ function distribuirLibros(socios) {
         titulo.innerHTML = socios[i].nombre + " " + socios[i].apellido;
         
         // creacion del boton 'Modificar'
-        var botonModificar = document.createElement("button");
+        var botonModificar = document.createElement("a");
         botonModificar.setAttribute("class", "btn d-flex justify-content-around btn-warning");
-        botonModificar.setAttribute("href", "#");
+        botonModificar.setAttribute("href", "altaSocio.html");
         botonModificar.innerHTML = "Modificar";
 
         // creacion del boton 'eliminar'

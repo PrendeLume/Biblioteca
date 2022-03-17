@@ -40,12 +40,7 @@ window.onload = function () {
         document.getElementById("menuInicio").appendChild(li);
     } else {
         document.getElementById("cerrarSesion").remove();
-        /* if (window.location.href.includes("LIBROS")) {
-         
-         } else {
- 
-             a.setAttribute("href", "#");
-         }*/
+        
     }
     if (sessionStorage.getItem('Expiracion') == (new Date().getTime())) {
         sessionStorage.clear();
@@ -54,6 +49,7 @@ window.onload = function () {
     document.getElementById("cerrarSesion").addEventListener("click", function () {
         sessionStorage.clear();
         localStorage.clear();
+        
     });
 }();
 
