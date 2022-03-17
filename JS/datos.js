@@ -18,15 +18,20 @@ var datos = (function () {
         ],
 
         socios: [
-            { id: 0, DNI: '56849204-N', nombre: 'Jose ', apellido: 'Per Abbat', url: 'IMG/El-Cantar-mio-Cid.jpg'},
-            { id: 1, DNI: '56842334-M', nombre: 'Cris', apellido: 'Carlos', url: 'IMG/ejemplo.jpg'},
-            { id: 2, DNI: '23842334-L', nombre: 'LOpez', apellido: 'Pepito', url: 'IMG/ejemplo.jpg'},
-            { id: 3, DNI: '57542334-P', nombre: 'Paco', apellido: 'Desconocido', url: 'IMG/ejemplo.jpg'},
-            { id: 4, DNI: '51942334-O', nombre: 'pepito', apellido: 'Vikingos', url: 'IMG/ejemplo.jpg'},
+            { id: 0, codigo: 12314, DNI: '56849204-N', nombre: 'Jose ', apellido: 'Per Abbat', url: 'IMG/1361728.png'},
+            { id: 1, codigo: 23441, DNI: '56842334-M', nombre: 'Cris', apellido: 'Carlos', url: 'IMG/1361728.png'},
+            { id: 2, codigo: 4324, DNI: '23842334-L', nombre: 'LOpez', apellido: 'Pepito', url: 'IMG/1361728.png'},
+            { id: 3, codigo: 12343, DNI: '57542334-P', nombre: 'Paco', apellido: 'Desconocido', url: 'IMG/1361728.png'},
+            { id: 4, codigo: 21423, DNI: '51942334-O', nombre: 'pepito', apellido: 'Vikingos', url: 'IMG/1361728.png'},
         ],
 
         prestamos: [
             
+        ],
+        masBuscados: [
+            { id: 0, ISBN: '56849204-6', titulo: 'Mio Cid', autor: 'Per Abbat', editorial: 'galaxia', cantidad: 5, precio: 5.65, url: 'LIBROS/IMG/El-Cantar-mio-Cid.jpg', descripcion: 'Narra las aventuras del heroe español Mio Cid' },
+            { id: 4, ISBN: '51942334-6', titulo: 'Leyenda del thor', autor: 'Vikingos', editorial: 'galaxia', cantidad: 10, precio: 0.70, url: 'LIBROS/IMG/ejemplo.jpg', descripcion: 'Narra las grandes batallas llevadas a cabo por el hijo de Odin' },
+            { id: 7, ISBN: '51942334-6', titulo: 'hajime no ippo', autor: 'Vikingos', editorial: 'galaxia', cantidad: 10, precio: 0.70, url: 'LIBROS/IMG/ejemplo.jpg', descripcion: 'Narra las grandes batallas llevadas a cabo por el hijo de Odin' }
         ]
 
     };

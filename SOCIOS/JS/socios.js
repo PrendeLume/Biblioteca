@@ -17,7 +17,8 @@ function busquedaLibros() {
 
     for (var i = 0; i < socios.length; i++) {
         if (socios[i] !== null) {
-            if (socios[i].nombre.includes(abuscar)) {
+            var NombreSocios = socios[i].nombre.toLowerCase();
+            if (NombreSocios.includes(abuscar)) {
                 aux.push(socios[i]);
             }
         }
@@ -35,7 +36,7 @@ function distribuirLibros(socios) {
         //Creacion filas
         if (i % 6 == 0) {
             var row = document.createElement("section");
-            row.setAttribute("class", "row separacionTop");
+            row.setAttribute("class", "row separacionTop ");
         }
 
         //creacion del articulo
@@ -45,7 +46,7 @@ function distribuirLibros(socios) {
         //creacion del div(card)
         var div = document.createElement("div")
 
-        div.setAttribute("class", "card");
+        div.setAttribute("class", "card row gris-titulo");
         //creacion de la imagen
         var imagen = document.createElement("img");
         imagen.setAttribute("src", socios[i].url);

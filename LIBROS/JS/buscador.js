@@ -17,7 +17,8 @@ function busquedaLibros() {
 
     for (var i = 0; i < libros.length; i++) {
         if (libros[i] !== null) {
-            if (libros[i].titulo.includes(abuscar)) {
+            var tituloLibros = libros[i].titulo.toLowerCase();
+            if (tituloLibros.includes(abuscar)) {
                 aux.push(libros[i]);
             }
         }
