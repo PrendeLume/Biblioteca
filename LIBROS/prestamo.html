@@ -58,12 +58,30 @@
                     <!--Seguridad-->
                     <!--js-->
                     <script src="../JS/datos.js"></script>
-                    <script src="JS/addSocio.js"></script>
+                    <script src="JS/prestamo.js"></script>
                     <!--js-->
-                    <h2 class="row mt-4 justify-content-center">Alta socio</h2>
-                    <article class="row mt-2 mb-2 justify-content-center">
+                    <h2 class="row mt-4 justify-content-center">Prestamo</h2>
 
-                        <form class="col-4 rounded" name="alta" onsubmit="addSocio();">
+                    
+                    <article class="row mt-2 mb-2 justify-content-center">
+                        
+                        <form class="col-4 rounded" id="prestamo" action="#" name="prestamo" onsubmit="return addPrestamo();">
+                            <h4>Libro</h4>
+                            <section class="row">
+                                <div class="col form-group">
+                                    <label for="ISBN">ISBN</label>
+                                    <input id="isbn" class="form-control" type="text" name="isbn"
+                                        placeholder="Introduzca el ISBN">
+                                </div>
+                                <div class="col form-group">
+                                    <label for="titulo">Titulo</label>
+                                    <input id="titulo" class="form-control" name="titulo" type="text"readonly>
+                                </div>
+                            </section>
+                            
+                            <section class="row">
+                                <h4 class="col-12">Cliente</h4>
+                            </section>
                             <section class="row">
                                 <div class="col form-group">
                                     <label for="dni">DNI</label>
@@ -72,18 +90,19 @@
                                 </div>
                                 <div class="col form-group">
                                     <label for="nombre">Nombre</label>
-                                    <input id="nombre" class="form-control" type="text" name="nombre"
-                                        placeholder="Introduzca el Nombre">
+                                    <input id="nombre" class="form-control" type="text" name="nombre"readonly>
                                 </div>
                                 <div class="col form-group">
                                     <label for="apellido">Apellido</label>
-                                    <input id="apellido" class="form-control" name="apellido" type="text"
-                                        placeholder="Introduzca el Apellido">
+                                    <input id="apellido" class="form-control" name="apellido" type="text" readonly>
                                 </div>
                             </section>
+
                             <div class="btn-group-toggle float-right mt-2">
+                                <button type="button" class="btn btn-primary" onclick="comprobar();">Comprobar</button>
                                 <button type="submit" class="btn btn-primary">Enviar</button>
                             </div>
+                            
                         </form>
                     </article>
                 </section>

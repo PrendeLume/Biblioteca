@@ -60,13 +60,13 @@ function distribuirLibros(socios) {
         
         // creacion del boton 'Modificar'
         var botonModificar = document.createElement("a");
-        botonModificar.setAttribute("class", "btn d-flex justify-content-around btn-warning");
+        botonModificar.setAttribute("class", "btn boton d-flex justify-content-around btn-warning");
         botonModificar.setAttribute("href", "altaSocio.html");
         botonModificar.innerHTML = "Modificar";
 
         // creacion del boton 'eliminar'
         var botonEliminar = document.createElement("button");
-        botonEliminar.setAttribute("class", "btn d-flex justify-content-around btn-danger mt-2");
+        botonEliminar.setAttribute("class", "btn boton d-flex justify-content-around btn-danger mt-2");
         botonEliminar.addEventListener("click", function () { borrarLibro(socios[i].id) });
         botonEliminar.innerHTML = "Eliminar";
 

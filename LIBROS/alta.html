@@ -60,10 +60,10 @@
                     <script src="../JS/datos.js"></script>
                     <script src="JS/addBook.js"></script>
                     <!--js-->
-                    <h2 class="row justify-content-center">Alta Libros</h2>
+                    <h2 class="row mt-4 justify-content-center">Alta Libros</h2>
                     <article class="row mt-2 mb-2 justify-content-center">
 
-                        <form class="col-4 rounded" name="alta" onsubmit="addBook();">
+                        <form class="col-4 rounded" id="alta" action="#" name="alta" onsubmit="return addBook();">
                             <section class="row">
                                 <div class="col form-group">
                                     <label for="ISBN">ISBN</label>
@@ -94,13 +94,13 @@
                                         <div class="col form-group">
                                             <label for="cantidad">Cantidad</label>
                                             <input id="cantidad" class="form-control" type="number" name="cantidad"
-                                                placeholder="Introduzca la cantidad de libros">
+                                                placeholder="00">
                                         </div>
                                     </section>
                                     <section class="row">
                                         <div class="col form-group mt-2">
-                                            <label for="cantidad">Precio</label>
-                                            <input id="cantidad" class="form-control" type="number" name="precio"
+                                            <label for="precio">Precio</label>
+                                            <input id="precio" class="form-control" type="number" name="precio"
                                                 placeholder="Introduzca el precio">
                                         </div>
                                     </section>
@@ -124,11 +124,7 @@
                     </article>
                 </section>
             </main>
-            <footer class="row">
-                <section class="col azul-cielo border-top border-dark">
-                    <p>dereitos de autor</p>
-                </section>
-            </footer>
+            
         </main>
         <script src="../node_modules/jquery/dist/jquery.slim.min.js"></script>
         <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
