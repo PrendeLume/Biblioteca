@@ -12,7 +12,7 @@ window.onload = function () {
         console.log(window.location.href);
         if (window.location.href.includes("LIBROS")) {
             a.setAttribute("href", "libros.html");
-        } else if(window.location.href.includes("SOCIOS")){
+        } else if (window.location.href.includes("SOCIOS")) {
             a.setAttribute("href", "../LIBROS/libros.html");
         } else {
 
@@ -28,7 +28,7 @@ window.onload = function () {
         var a = document.createElement("a");
         if (window.location.href.includes("LIBROS")) {
             a.setAttribute("href", "../SOCIOS/socios.html");
-        }else if(window.location.href.includes("SOCIOS")){
+        } else if (window.location.href.includes("SOCIOS")) {
             a.setAttribute("href", "socios.html");
         } else {
 
@@ -38,9 +38,45 @@ window.onload = function () {
         li.appendChild(a);
 
         document.getElementById("menuInicio").appendChild(li);
+        //Prestamo
+        var li = document.createElement("li");
+        li.setAttribute("class", "enlinea");
+        li.setAttribute("id", "addLibro");
+        var a = document.createElement("a");
+        if (window.location.href.includes("LIBROS")) {
+            a.setAttribute("href", "prestamo.html");
+        } else if (window.location.href.includes("SOCIOS")) {
+            a.setAttribute("href", "../LIBROS/prestamo.html");
+        } else {
+
+            a.setAttribute("href", "LIBROS/prestamo.html");
+        }
+        a.innerHTML = "Prestamo";
+        li.appendChild(a);
+
+        document.getElementById("menuInicio").appendChild(li);
+        //Devolucion
+        var li = document.createElement("li");
+        li.setAttribute("class", "enlinea");
+
+        li.setAttribute("id", "addSocio");
+        var a = document.createElement("a");
+        if (window.location.href.includes("LIBROS")) {
+            a.setAttribute("href", "../SOCIOS/devolucion.html");
+        } else if (window.location.href.includes("SOCIOS")) {
+            a.setAttribute("href", "devolucion.html");
+        } else {
+
+            a.setAttribute("href", "SOCIOS/devolucion.html");
+        }
+        a.innerHTML = "Devolucion";
+        li.appendChild(a);
+
+        document.getElementById("menuInicio").appendChild(li);
+
     } else {
         document.getElementById("cerrarSesion").remove();
-        
+
     }
     if (sessionStorage.getItem('Expiracion') == (new Date().getTime())) {
         sessionStorage.clear();
@@ -49,7 +85,7 @@ window.onload = function () {
     document.getElementById("cerrarSesion").addEventListener("click", function () {
         sessionStorage.clear();
         localStorage.clear();
-        
+
     });
 }();
 

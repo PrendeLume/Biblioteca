@@ -58,7 +58,7 @@ function distribuirLibros(socios) {
         var titulo = document.createElement("h5");
         titulo.setAttribute("class", "card-title");
         titulo.innerHTML = socios[i].nombre + " " + socios[i].apellido;
-        
+
         // creacion del boton 'Modificar'
         var botonModificar = document.createElement("a");
         botonModificar.setAttribute("class", "btn boton d-flex justify-content-around btn-warning");
@@ -87,22 +87,22 @@ function distribuirLibros(socios) {
 
 function borrarLibro(id) {
     if (window.confirm("Esta seguro de que desea borrarlo")) {
-    var socios = JSON.parse(localStorage.getItem("socios"));
-    var pos = undefined;
-    for (let i = 0; i < socios.length; i++) {
-        if (socios[i].id === id) {
-            pos = i;
-            break;
+        var socios = JSON.parse(localStorage.getItem("socios"));
+        var pos = undefined;
+        for (let i = 0; i < socios.length; i++) {
+            if (socios[i].id === id) {
+                pos = i;
+                break;
+            }
         }
-    }
 
-    if (pos) {
-        socios.splice(pos, 1);
-    } else {
-        console.error("MAL");
-    }
-    localStorage.setItem("socios", JSON.stringify(socios));
+        if (pos) {
+            socios.splice(pos, 1);
+        } else {
+            console.error("MAL");
+        }
+        localStorage.setItem("socios", JSON.stringify(socios));
 
-    distribuirLibros(socios);
-}
+        distribuirLibros(socios);
+    }
 }
