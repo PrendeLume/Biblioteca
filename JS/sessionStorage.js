@@ -43,7 +43,6 @@ window.onload = function () {
              a.setAttribute("href", "#");
          }*/
     }
-    console.log((new Date().getTime()));
     if (sessionStorage.getItem('Expiracion') == (new Date().getTime())) {
         sessionStorage.clear();
     }

@@ -2,21 +2,24 @@
 function addBook(){
 
     var formulario = document.forms['alta'];
-    var libros = datos.libros;
-
-    for (var i=0; i< libros.length; i++) {
-        if (libros[i].titulo.includes(formulario)){
+    var socios = JSON.parse(localStorage.getItem("socios"));
+    console.log(socios);
+    var existe = true;
+    for (var i=0; i< socios.length; i++) {
+        if (socios[i].ISBN.includes(formulario['isbn'])){
             return alert("Este libro ya existe");
         }else{
-            var librosLocal = localStorage.getItem("libros");
-            librosLocal.push("libro","{id:" + (libros.length+1) + "}");
-            console.log(librosLocal);
-            //"libro","{id:" + (libros.length+1) + "}"
-            localStorage.setItem(librosLocal);
+            existe = false;
+            
         }
     }
-    
-    console.log("hola " + formulario);
-
-
+    if(!existe){
+        var nuevoLibro = JSON.stringify(socios);
+        nuevoLibro = nuevoLibro.replace(']', ',{"id":8,"DNI":"56849204-6","nombre":"Mio Cid","apellido":"Per Abbat","url":"IMG/El-Cantar-mio-Cid.jpg"}]');
+        console.log(nuevoLibro);
+        localStorage.setItem("socios", nuevoLibro);
+        return alert("Completado");
+    }else{
+        return alert("Ha surgido un error inesperado");
+    }
 }
