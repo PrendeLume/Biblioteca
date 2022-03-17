@@ -1,12 +1,12 @@
-
+var idLibro = 7;
 function addBook(){
 
-    var formulario = document.forms['alta'];
+    var formulario = document.alta;;
     var libros = JSON.parse(localStorage.getItem("libros"));
     console.log(libros);
     var existe = true;
     for (var i=0; i< libros.length; i++) {
-        if (libros[i].ISBN.includes(formulario['isbn'])){
+        if (libros[i].ISBN.includes(formulario.isbn.value)){
             return alert("Este libro ya existe");
         }else{
             existe = false;
@@ -15,7 +15,7 @@ function addBook(){
     }
     if(!existe){
         var nuevoLibro = JSON.stringify(libros);
-        nuevoLibro = nuevoLibro.replace(']', ',{"id":8,"ISBN":"56849204-6","titulo":"Mio Cid","autor":"Per Abbat","editorial":"galaxia","cantidad":5,"precio":5.65,"url":"IMG/El-Cantar-mio-Cid.jpg","descripcion":"Narra las aventuras del heroe español Mio Cid"}]');
+        nuevoLibro = nuevoLibro.replace(']', ',{"id":'+(++idLibro)+',"ISBN":"'+formulario.isbn.value+'","titulo":"'+formulario.titulo.value+'","autor":"'+formulario.autor.value+'","editorial":"'+formulario.editorial.value+'","cantidad":'+formulario.cantidad.value+',"precio":'+formulario.precio.value+',"url":"IMG/El-Cantar-mio-Cid.jpg","descripcion":"'+formulario.descripcion.value+'"}]');
         console.log(nuevoLibro);
         localStorage.setItem("libros", nuevoLibro);
         return alert("Completado");
