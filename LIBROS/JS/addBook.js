@@ -1,4 +1,4 @@
-var idLibro = 7;
+
 function addBook(){
 
     var formulario = document.forms["alta"].elements;
@@ -52,8 +52,38 @@ function modificar(){
         formulario.editorial.value = libros[libroModificar].editorial;
         formulario.cantidad.value = libros[libroModificar].cantidad;
         formulario.precio.value = libros[libroModificar].precio;
-        //formulario.url.value;
         formulario.descripcion.value = libros[libroModificar].descripcion;
     }
    
+    localStorage.removeItem("libroModificar");
+}
+
+function modificarLibro2(){
+    
+    var formulario = document.forms["modificar"].elements;
+    console.warn("form", formulario);
+    
+    var libros = JSON.parse(localStorage.getItem("libros"));
+    
+    var libroModificar = localStorage.getItem("libroModificar");
+    libros.splice(libroModificar, 1);
+    var nuevoLibro = {
+        id: libros.length,
+        ISBN: formulario.isbn.value,
+        titulo: formulario.titulo.value,
+        autor: formulario.autor.value,
+        editorial: formulario.editorial.value,
+        cantidad: formulario.cantidad.value,
+        precio: formulario.precio.value,
+        url: "IMG/ejemplo.jpg",
+        descripcion: formulario.descripcion.value
+    };
+    libros.push(nuevoLibro);
+
+
+localStorage.setItem("libros", JSON.stringify(libros));
+alert("Completado");
+
+localStorage.removeItem("libroModificar");
+return true;
 }

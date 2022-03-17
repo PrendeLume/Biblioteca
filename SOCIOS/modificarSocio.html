@@ -63,7 +63,7 @@
                     <h2 class="row mt-4 justify-content-center">Modificar socio</h2>
                     <article class="row mt-2 mb-2 justify-content-center">
 
-                        <form class="col-4 rounded" id="modificar" name="modificar" onsubmit="addSocio();">
+                        <form class="col-4 rounded" id="alta" name="alta" action="socios.html" onsubmit="modificarSocio2();">
                             <section class="row">
                                 <div class="col form-group">
                                     <label for="codigo">Codigo</label>
@@ -89,10 +89,24 @@
                                         placeholder="Apellido">
                                 </div>
                                 </section>
+                                <section class="row">
+                                    <div class="col form-group">
+                                        <label for="telefono">Telefono</label>
+                                        <input id="telefono" class="form-control" type="text" name="telefono"
+                                            placeholder="664537555">
+                                    </div>
+                                    <div class="col form-group">
+                                        <label for="direccion">Direccion</label>
+                                        <input id="direccion" class="form-control" type="text" name="direccion"
+                                            placeholder="Vigo, As Neves">
+                                    </div>
+                                    
+                                </section>
+                                <div class="btn-group-toggle float-right mt-2">
+                                    <button type="submit" class="btn btn-primary">Enviar</button>
+                                </div>
                             </section>
-                            <div class="btn-group-toggle float-right mt-2">
-                                <button type="submit" class="btn btn-primary">Enviar</button>
-                            </div>
+                            
                         </form>
                     </article>
                 </section>
